@@ -6,7 +6,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 @WebServlet("/CustomerInfo")
 public class CustomerInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,6 +23,10 @@ public class CustomerInfo extends HttpServlet {
 		
 		String method = request.getMethod();
 		System.out.println(method);
+		
+		String addr = request.getRemoteHost() + request.getRemotePort() + request.getRemoteAddr() +
+			"==user=" + request.getRemoteUser();
+		System.out.println("addr: " + addr);
 		
 		String contextPath = request.getContextPath();
 		response.sendRedirect(contextPath + "/index.jsp");
