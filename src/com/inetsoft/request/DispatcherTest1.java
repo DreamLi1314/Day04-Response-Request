@@ -28,7 +28,7 @@ public class DispatcherTest1 extends HttpServlet {
 //		this.getServletContext().getRequestDispatcher("/DispatcherTest2").forward(request, response);
 
 		response.sendRedirect(request.getContextPath() + "/DispatcherTest2");
-		response.sendRedirect(request.getContextPath() + "/DispatcherTest2");
+//		response.sendRedirect(request.getContextPath() + "/DispatcherTest2");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
